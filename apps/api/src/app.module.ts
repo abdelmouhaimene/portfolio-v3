@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { SupabaseModule } from './supabase/supabase.module';
 import { ConfigModule } from '@nestjs/config';
 import { ProjectsModule } from './projects/projects.module';
+import { personalDataModule } from './personal-data/personal-data.module';
 import * as path from 'path';
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import * as path from 'path';
     }),
     SupabaseModule,
     ProjectsModule,
+    personalDataModule,
   ],
   controllers: [AppController],
   providers: [AppService],
