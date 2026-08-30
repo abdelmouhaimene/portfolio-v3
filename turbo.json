@@ -1,11 +1,13 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
+  "globalEnv" : ["SUPABASE_URL","SUPABASE_KEY"],
   "ui": "tui",
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**", "!.next/dev/**", ".next/standalone/**"]
+      "outputs": [".next/**", "!.next/cache/**", "!.next/dev/**", ".next/standalone/**"],
+      "env" : ["SUPABASE_URL","SUPABASE_KEY"]
     },
     "lint": {
       "dependsOn": ["^lint"]
