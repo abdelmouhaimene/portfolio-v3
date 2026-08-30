@@ -7,6 +7,7 @@ import { ProjectsModule } from './projects/projects.module';
 import { personalDataModule } from './personal-data/personal-data.module';
 import { ServicesModule } from './services/services.module';
 import { SkillsModule } from './skills/skills.module';
+import { AuthModule } from './auth/auth.module';
 import * as path from 'path';
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import * as path from 'path';
     personalDataModule,
     ServicesModule,
     SkillsModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
