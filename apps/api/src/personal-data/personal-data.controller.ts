@@ -8,7 +8,7 @@ export class personalDataController {
 
   @Get()
   getPersonalData() {
-    return this.personalDataService.getPersonalData();
+    return this.personalDataService.findAll();
   }
 
   @Put()

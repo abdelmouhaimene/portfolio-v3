@@ -10,9 +10,7 @@ export class personalDataService {
     private readonly supabase: SupabaseClient<Database>,
   ) {}
 
-  async getPersonalData(): Promise<
-    personalDataType.PersonalDataWithoutPassword[]
-  > {
+  async findAll(): Promise<personalDataType.PersonalDataWithoutPassword[]> {
     const { data, error } = await this.supabase
       .from('personalData')
       .select('name,email,profession,date,phone');

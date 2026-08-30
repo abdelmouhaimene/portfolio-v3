@@ -1,2 +1,4 @@
-export * as personalDataType from './personalData/personalDataType'
 export * from './database.types'
+export * as personalDataType from './personalData/personalDataType'
+export * as servicesType from './services/servicesType'
+export * as skillsType from './skills/skillsType'
