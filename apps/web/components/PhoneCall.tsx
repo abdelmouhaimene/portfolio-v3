@@ -87,7 +87,7 @@ const PhoneCall = () => {
     <div className=" relative flex justify-center items-center">
       <div className="absolute w-80 h-80 bg-[#7ED6B5]/20 rounded-full blur-3xl" />
 
-      <div className="relative z-10 w-[270px]">
+      <div className="relative z-10 w-67.5">
         <div
           className="signup-form-container relative bg-[#1c1c1e] rounded-[3rem] shadow-2xl overflow-hidden"
           style={{ aspectRatio: '9/19.5', border: '8px solid #3a3a3c' }}
@@ -99,7 +99,7 @@ const PhoneCall = () => {
             }`}>
               {answered && (
                 <>
-                  <div className="w-4 h-4 bg-[#7ED6B5] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-4 h-4 bg-[#7ED6B5] rounded-full flex items-center justify-center shrink-0">
                     <svg className="w-2.5 h-2.5 text-black" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                     </svg>
@@ -114,7 +114,7 @@ const PhoneCall = () => {
 
           {/* ── HOME ── */}
           {screen === 'home' && (
-            <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a2e] to-[#16213e] flex flex-col">
+            <div className="absolute inset-0 bg-linear-to-b from-[#1a1a2e] to-[#16213e] flex flex-col">
               <div className="flex justify-between items-center px-6 pt-14 pb-2">
                 <span className="font-satoshi text-white text-xs">9:41</span>
                 <div className="flex items-center gap-1">

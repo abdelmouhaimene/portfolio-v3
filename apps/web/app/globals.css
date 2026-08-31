@@ -24,6 +24,11 @@
   .action-button {
     @apply px-4 py-2 gap-x-2 flex justify-between items-center font-work-sans font-semibold md:text-lg text-sm border-2 border-brightyellow hover:border-white transition-all duration-300 hover:bg-gradient-to-tr hover:from-yellow-700 hover:via-orange-400 hover:to-red-500 rounded-full cursor-pointer hover:shadow-lg hover:shadow-brightyellow active:scale-75;
   }
+
+  .action-button-small {
+    @apply px-4 py-2 gap-x-2 flex justify-between items-center font-work-sans font-semibold md:text-sm text-sm border-2 border-brightyellow hover:border-white transition-all duration-300 hover:bg-gradient-to-tr hover:from-yellow-700 hover:via-orange-400 hover:to-red-500 rounded-full cursor-pointer hover:shadow-lg hover:shadow-brightyellow active:scale-75;
+  }
+
   .action-button-bg {
     @apply px-4 py-2 gap-x-2 flex justify-between items-center font-work-sans font-semibold md:text-lg text-sm border-2 border-brightyellow hover:border-white hover:bg-none hover:bg-transparent transition-all duration-300 bg-gradient-to-tr from-yellow-700 via-orange-400 to-red-500 rounded-full cursor-pointer hover:shadow-lg hover:shadow-brightyellow active:scale-75;
   }

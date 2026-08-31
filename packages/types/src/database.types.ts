@@ -103,15 +103,21 @@ export type Database = {
       }
       services: {
         Row: {
+          description: string | null
           id: number
+          image: string | null
           name: string
         }
         Insert: {
+          description?: string | null
           id?: number
+          image?: string | null
           name: string
         }
         Update: {
+          description?: string | null
           id?: number
+          image?: string | null
           name?: string
         }
         Relationships: []
