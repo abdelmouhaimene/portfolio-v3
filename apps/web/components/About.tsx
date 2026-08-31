@@ -1,19 +1,29 @@
 import React from 'react'
 import ActionButtons from './ActionButtons'
-const About = () => {
+import SkillsTypeAnimation from './SkillsTypeAnimation'
+
+
+const About = async () => {
+   const skills = await fetch('http://localhost:3001/skills').then(res => res.json());
+   const personalData = await fetch('http://localhost:3001/personal-data').then(res => res.json());
   return (
     <div className='section-container '>
-        <p className='font-work-sans font-extrabold text-4xl mb-4'>
+        <p className='font-work-sans font-extrabold text-6xl mb-4'>
         Let’s explore the
-        Art of STORYTELLING
+        Art of SOFTWARE
         </p>
-        <p className='font-work-sans font-medium text-lg mb-6'>
-        Get the Best <span className='font-bold'>2D, 3D Video Animation Service</span> for your <span className='font-bold'> product explainer video </span>product explainer video or for advertising, feature films, television and special venues.
+        <p className='font-work-sans font-medium text-3xl mb-6'>
+          Hello, I am <span className='font-bold'>
+          {personalData[0].name},
+          <br/>
+          </span> Expert on <span className='font-bold'> 
+            <SkillsTypeAnimation skills={skills} />
+          </span>
         </p>
+        <p className='font-work-sans font-medium text-xl mb-6'> I help businesses turn their ideas into professional, scalable, and maintainable applications.</p>
         <div className='min-w-3/4'>
           <ActionButtons />
         </div>
-
     </div>
   )
 }
