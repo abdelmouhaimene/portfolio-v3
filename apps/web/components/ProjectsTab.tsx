@@ -1,10 +1,9 @@
 "use client"
 import React,{useState } from 'react'
-import { portfolioData } from '../data'
 import PortoflioCarousel from './PortoflioCarousel'
 import { servicesType,projectsType } from '@repo/types' 
 const ProjectsTab = ({services,projects}: {services: servicesType.services[], projects: projectsType.projects[]}) => {
-    const [selectedTab,setSelectedTab] = useState(portfolioData[0])
+    const [selectedTab,setSelectedTab] = useState<servicesType.services>(services[0]!)
 
     return (
         <div>
@@ -14,7 +13,7 @@ const ProjectsTab = ({services,projects}: {services: servicesType.services[], pr
                 ))}
             </div>
             <div>
-                <PortoflioCarousel selectedTab={selectedTab}/>
+                <PortoflioCarousel selectedTab={selectedTab} projects={projects}/>
             </div>
         </div>
     )

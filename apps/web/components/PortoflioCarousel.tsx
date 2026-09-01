@@ -1,13 +1,14 @@
 import React from 'react'
-import { PortfolioCategoryType } from '../dataTypes';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Import Swiper styles
 import 'swiper/css/navigation'; // Optional navigation module styles
 import 'swiper/css/pagination'; // Optional pagination module styles
 import { Navigation, Pagination,Autoplay } from 'swiper/modules';
+import { servicesType,projectsType } from '@repo/types' 
+
 import PortfolioCard from './PortfolioCard';
 
-const PortoflioCarousel = ({selectedTab} : {selectedTab : PortfolioCategoryType}) => {
+const PortoflioCarousel = ({selectedTab, projects} : {selectedTab : servicesType.services, projects: projectsType.projects[]}) => {
 
 
   return (
@@ -45,7 +46,7 @@ const PortoflioCarousel = ({selectedTab} : {selectedTab : PortfolioCategoryType}
           },
         }}
       >
-        {selectedTab.projects.map((project,index) => (
+        {projects.filter((project) => project.service === selectedTab.id).map((project, index) => (
           <SwiperSlide key={index} >
             <PortfolioCard project={project} />
           </SwiperSlide>
