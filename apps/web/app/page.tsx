@@ -12,7 +12,7 @@ import Quote from "../sections/Quote";
 
 export default function Home() {
   return (
-    <div className="bg-image bg-cover  bg-no-repeat bg-center bg-[url(/bg.jpg)]" >
+    <div className="bg-image bg-cover  bg-no-repeat bg-center bg-[url(/tst.jpg)]" >
        <Navbar phone={<Phone/>}/>
       <div className="md:pt-16 pt-32">
         <Hero />
@@ -21,7 +21,6 @@ export default function Home() {
         <Quote/>
         <Pricing />
         <Process />
-        <Testimonials />
         <Testimonials />
         <Footer />
       </div>

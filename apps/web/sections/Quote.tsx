@@ -3,7 +3,7 @@ import BiometricBadge from '../components/BiometricBadge'
 import SignUp from '../components/SignUp'
 const Quote = () => {
   return (
-    <div className='section-container mt-10'>
+    <div id='quote' className='section-container mt-10'>
       <p className='font-work-sans font-black lg:text-8xl md:text-6xl text-4xl '>
         Start with us
       </p>
@@ -15,7 +15,7 @@ const Quote = () => {
         <div className='md:w-1/2 w-full section-container z-10 '>
           <BiometricBadge/>
         </div>
-        <div className='md:w-1/2 w-full py-10 lg:px-20 md:px-10 px-4 z-10 ' >
+        <div className='md:w-1/2 w-full py-10 lg:px-20 md:px-10  z-10 ' >
           <SignUp />
         </div>
       </div>

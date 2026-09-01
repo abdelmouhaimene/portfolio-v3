@@ -45,7 +45,7 @@ export default function BiometricBadge({
   }, []);
 
   return (
-    <div ref={rootRef} className="relative flex items-center justify-center w-full min-h-[420px] p-8">
+    <div ref={rootRef} className="relative flex items-center justify-center w-full md:min-h-[420px] min-h-[210px] p-8 ">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap');
         @keyframes flapOpen {
@@ -127,7 +127,7 @@ export default function BiometricBadge({
       {/* wallet pocket behind the card */}
       <div className="relative">
         <div
-          className={`absolute left-1/2 -translate-x-1/2 -top-6 w-[500px] h-[260px] rounded-[22px] bg-gradient-to-b from-[#241812] to-[#100b08] border border-[#3a2a1c] shadow-[0_18px_30px_rgba(0,0,0,0.55)] ${
+          className={`absolute left-1/2 -translate-x-1/2 -top-6 w-[300px] h-[160px] md:w-[500px] md:h-[260px] rounded-[22px] bg-gradient-to-b from-[#241812] to-[#100b08] border border-[#3a2a1c] shadow-[0_18px_30px_rgba(0,0,0,0.55)] ${
             inView ? "badge-wallet-play" : "badge-wallet-hidden"
           }`}
           style={{ zIndex: 0 }}
@@ -137,7 +137,7 @@ export default function BiometricBadge({
 
         {/* the card */}
         <div
-          className={`relative w-[500px] h-[260px] rounded-[20px] overflow-hidden border border-[#c9a13b]/40 ${
+          className={`relative  w-[300px] h-[160px] md:w-[500px] md:h-[260px] rounded-[20px] overflow-hidden border border-[#c9a13b]/40 ${
             inView ? "badge-card-play" : "badge-card-hidden"
           }`}
           style={{

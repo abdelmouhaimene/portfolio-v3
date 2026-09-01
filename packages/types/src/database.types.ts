@@ -86,18 +86,65 @@ export type Database = {
       projects: {
         Row: {
           created_at: string | null
+          github: string | null
           id: number
+          Image: string | null
+          link: string | null
           name: string | null
+          service: number | null
         }
         Insert: {
           created_at?: string | null
+          github?: string | null
           id?: number
+          Image?: string | null
+          link?: string | null
           name?: string | null
+          service?: number | null
         }
         Update: {
           created_at?: string | null
+          github?: string | null
           id?: number
+          Image?: string | null
+          link?: string | null
           name?: string | null
+          service?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "projects_service_fkey"
+            columns: ["service"]
+            isOneToOne: false
+            referencedRelation: "services"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      Quote: {
+        Row: {
+          created_at: string
+          email: string
+          id: number
+          name: string
+          phone: string
+          project: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: number
+          name: string
+          phone: string
+          project: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: number
+          name?: string
+          phone?: string
+          project?: string
         }
         Relationships: []
       }

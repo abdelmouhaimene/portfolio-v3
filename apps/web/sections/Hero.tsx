@@ -4,7 +4,7 @@ import Image from 'next/image'
 import PhoneCall from '../components/PhoneCall'
 const Hero = () => {
   return (
-    <div className='flex-between flex-responsive w-full relative lg:gap-y-2 gap-y-0 p-10'>
+    <div className='flex-between flex-responsive w-full relative lg:gap-y-2 gap-y-0 md:p-10'>
         <div className='md:w-1/2 w-full section-container z-10 '>
             <About />
         </div>
