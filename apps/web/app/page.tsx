@@ -8,6 +8,7 @@ import Process from "../sections/Process";
 import Services from "../sections/Services";
 import Testimonials from "../sections/Testimonials";
 import Phone from "../components/Phone";
+import Quote from "../sections/Quote";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Services />
         <Portfolio />
+        <Quote/>
         <Pricing />
         <Process />
         <Testimonials />

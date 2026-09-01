@@ -1,6 +1,5 @@
 import React from 'react'
 import About from '../components/About'
-import SignUp from '../components/SignUp'
 import Image from 'next/image'
 import PhoneCall from '../components/PhoneCall'
 const Hero = () => {
