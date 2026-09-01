@@ -14,7 +14,7 @@ export class ServicesService {
     if (error) {
       throw new Error(error.message);
     }
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return data;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
+    return data.sort((a, b) => a.id - b.id);
   }
 }

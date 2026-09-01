@@ -147,6 +147,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@repo/tools':
+        specifier: workspace:*
+        version: link:../../packages/tools
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -235,6 +238,8 @@ importers:
       typescript-eslint:
         specifier: 8.68.0
         version: 8.68.0(@typescript/typescript6@6.0.2)(eslint@10.9.1(jiti@2.7.0)(supports-color@8.1.1))(supports-color@8.1.1)
+
+  packages/tools: {}
 
   packages/types:
     dependencies:
