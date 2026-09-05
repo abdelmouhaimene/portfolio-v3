@@ -11,7 +11,7 @@ const Process = () => {
             Matching Your Business <br /> Needs Effectively
         </div>
         <div className='mt-2 font-work-sans font-light text-sm text-center text-gray-200'>
-            We’re determined to explore more than what may be just a quick fix for your business. Together,<br /> we can tailor our <span className='font-bold'>animated corporate video production</span> for continual growth.
+            From Ideas to Impact,<br /> A clear, collaborative process designed to turn <span className='font-bold'>your business challenges</span> nto powerful, reliable software solutions.
         </div>
         <ProcessCaroussel />
     </div>
