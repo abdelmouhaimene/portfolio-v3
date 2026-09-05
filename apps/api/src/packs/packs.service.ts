@@ -10,7 +10,10 @@ export class PacksService {
     private readonly supabase: SupabaseClient<Database>,
   ) {}
   async findAllPacks(): Promise<packsType.Packs[]> {
-    const { data, error } = await this.supabase.from('Packs').select('*');
+    const { data, error } = await this.supabase
+      .from('Packs')
+      .select('*')
+      .order('id', { ascending: true });
     if (error) {
       throw new Error(error.message);
     }
@@ -33,7 +36,8 @@ export class PacksService {
         )
       `,
       )
-      .eq('pack', pack);
+      .eq('pack', pack)
+      .order('id', { ascending: true });
     if (error) {
       throw new Error(error.message);
     }
