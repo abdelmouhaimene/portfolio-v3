@@ -6,4 +6,9 @@ export type pack_taskInsert =
   Database['public']['Tables']['pack_task']['Insert'];
 export type pack_taskUpdate =
   Database['public']['Tables']['pack_task']['Update'];
+export type TaskName = {
+  task: {
+    name: string;
+  };
+};
 

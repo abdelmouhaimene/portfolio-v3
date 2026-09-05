@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { PacksService } from './packs.service';
 
 @Controller('packs')
@@ -11,5 +11,9 @@ export class PacksController {
   @Get('/tasks')
   findAllTasks() {
     return this.PacksService.findAllTasks();
+  }
+  @Get('/tasks/:pack')
+  findTaskByPack(@Param('pack') pack: number) {
+    return this.PacksService.findTaskByPack(pack);
   }
 }

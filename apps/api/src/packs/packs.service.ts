@@ -23,4 +23,22 @@ export class PacksService {
     }
     return data;
   }
+  async findTaskByPack(pack: number): Promise<string[]> {
+    const { data, error } = await this.supabase
+      .from('pack_task')
+      .select(
+        `
+        task (
+          name
+        )
+      `,
+      )
+      .eq('pack', pack);
+    if (error) {
+      throw new Error(error.message);
+    }
+    const tasks: taskPacksType.TaskName[] = data;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
+    return tasks.map((item) => item.task.name);
+  }
 }
