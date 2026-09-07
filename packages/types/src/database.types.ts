@@ -211,6 +211,36 @@ export type Database = {
         }
         Relationships: []
       }
+      review: {
+        Row: {
+          clientJob: string | null
+          clientName: string | null
+          comment: string | null
+          created_at: string
+          id: number
+          logo: string | null
+          name: string | null
+        }
+        Insert: {
+          clientJob?: string | null
+          clientName?: string | null
+          comment?: string | null
+          created_at?: string
+          id?: number
+          logo?: string | null
+          name?: string | null
+        }
+        Update: {
+          clientJob?: string | null
+          clientName?: string | null
+          comment?: string | null
+          created_at?: string
+          id?: number
+          logo?: string | null
+          name?: string | null
+        }
+        Relationships: []
+      }
       services: {
         Row: {
           description: string | null

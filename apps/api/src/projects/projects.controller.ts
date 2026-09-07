@@ -6,7 +6,7 @@ export class ProjectsController {
   constructor(private readonly projectsService: ProjectsService) {}
 
   @Get()
-  async getProjects(): Promise<any> {
+  async getProjects() {
     return await this.projectsService.findAll();
   }
 }

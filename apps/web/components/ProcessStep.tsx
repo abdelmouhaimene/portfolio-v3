@@ -1,10 +1,10 @@
 
 import React from 'react'
-import { processStepType } from '../dataTypes'
+import { processType } from '@repo/types'
 import Image from 'next/image'
 import { TbArrowBigRightLines } from "react-icons/tb";
 import { AiOutlineLike } from "react-icons/ai";
-const ProcessStep = ({step,selectedStep,index,lenght} : {step : processStepType,selectedStep:number,index : number , lenght : number}) => {
+const ProcessStep = ({step,selectedStep,index,lenght} : {step : processType.processStepType,selectedStep:number,index : number , lenght : number}) => {
     const inTime = (fullClassName : string) => {
         return index === selectedStep ? fullClassName : fullClassName+' brightness-60'
     }
